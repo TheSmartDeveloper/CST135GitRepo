@@ -1,0 +1,20 @@
+Readme for Final Project
+
+Name: Kevin George
+Professor: Prof. Parker
+Class: CST135
+Date: Friday September 7th, 2018
+
+This folder includes all of the files pertaining to milestone 1. 
+
+Part 1 of milestone 1 is in the file "vending machine storyboard complete.odt" There is also a pdf of the same document (with the same name) if the odt will not open on your computer. This document shows the flow of information and actions between a user and the machine. This does not include any information about maintenance as that is included in another more literal diagram. This file also includes an outline of the classes I wanted to include in part 2. This is not important to part 1 however it does show my ideas about what should and shouldn't be in the UML.
+
+Part 2 and part 3 of milestone 1 are in the file "vending_machine_UML_Kevin_George.pdf". For ease of use for this milestone, all attributes and methods are considered pbulic, and I should also mention that constant variables are fully capitalized with underscores for spaces (this is detailed further in the legend). 
+
+In regards to part 2, I have included the UML class diagram for the product one might find in a vending machine. I have titled this class as "Item" in the chart and all of the attributes and methods for Item are contained in it.The two attributes that the item needs is the price and name since these will be specific to the item and we are also assuming that the project is not too complex where the vending machine owner could set their own price. For methods, price and name have associated "get" and "set" methods, Item is also included as a constructor method with the price and name attributes included.
+
+For part 3, the vendingMachine class will model a dispenser for the items. This class has attributes COLUMN_SIZE (a constant integer that sets the maximum number of items in a column) and NUMBER_COLUMNS integer which determines how many available columns are in the machine. There is also the columnID which is an integer array for picking an item in a specific column as well as columnPrice, also an integer array for getting the price at a specific column. columnSnackCount, another array, contains information about how many items are in that column of the machine. Finally the three methods are vendingMachine, the constructor, dispenseItem to deliver the item to the customer, and loadMachine so that a maintenance user can add in products.
+
+For part 2 and 3 a legend is included to make understanding the UML class diagram a little easier. The relationship between vendingMachine and item can be described as a composition relationship since, for the purpose of this program, the snacks cannot theoretically exist outside of the vending machine.
+
+The last included image is the normal_use_and_maintenance_use_diagram.jpg. This is to show a literal representation of how the user would interact with the vending machine and how the maintenance user would interact with the machine. Each interaction is described, however this is not included in the current UML diagram as that will make it more complex than it needs to be right now and because it also provides an idea about what will be done later in this project.
