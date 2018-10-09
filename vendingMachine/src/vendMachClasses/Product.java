@@ -1,10 +1,10 @@
 package vendMachClasses;
 import java.util.*;
 
-abstract public class Product										//abstract class product where the food and drinks will inherit properties from
+abstract public class Product implements Comparable										//abstract class product where the food and drinks will inherit properties from
 {
-	private String name;											//name and price var created since every product will have these
-	private double price;
+	String name;											//name and price var created since every product will have these
+	double price;
 	
 	public Product()												//default constructor
 	{
@@ -77,6 +77,9 @@ class Candy extends Snack													//Class candy for candy products only
 	public Candy(double price, String name, double snackWeight, boolean flavor)		//overloaded constructor, flavor pre-assigned, and price, name, weight, and flavor are passed in
 	{
 		this.sweet = flavor;
+		this.name = name;
+		this.price = price;
+		this.ounces = snackWeight; 
 	}
 	public void setFlavor(boolean flavor)									//set & get method so that product flavors can be changed
 	{
@@ -90,6 +93,35 @@ class Candy extends Snack													//Class candy for candy products only
 	{
 		return this.getName() + "This is a candy bar";
 	}
+	//@Override
+	public void comparedTo(Product p1, Product p2)
+	{
+		int compVal = p1.name.compareTo(p2.name);
+		if(compVal < 0 )
+		{
+			System.out.println(p2.getName() + " is greater than " + p1.getName());
+		}
+		else if(compVal > 0)
+		{
+			System.out.println(p1.getName() + " is greater than " + p2.getName());
+		}
+		else if(compVal == 0)
+		{
+			if(p1.getPrice() > p2.getPrice())
+			{
+				System.out.println(p1.getName() + " is greater than " + p2.getName());
+			}
+			else
+			{
+				System.out.println(p2.getName() + " is greater than " + p1.getName());
+			}
+		}
+		else
+		{
+			System.out.println("Something broke");
+		}
+		
+	}
 }
 
 class Chips extends Snack													//Class chips for chips products only
@@ -102,6 +134,9 @@ class Chips extends Snack													//Class chips for chips products only
 	public Chips(double price, String name, double snackWeight, boolean flavor)		//overloaded constructor, flavor pre-assigned, and price, name, weight, and flavor are passed in
 	{
 		this.salty = flavor;
+		this.name = name;
+		this.price = price;
+		this.ounces = snackWeight;
 	}
 	public void setFlavor(boolean flavor)									//set & get method so that product flavors can be changed
 	{
@@ -115,6 +150,34 @@ class Chips extends Snack													//Class chips for chips products only
 	{
 		return "This is a bag of chips";
 	}
+	public void comparedTo(Product p1, Product p2)
+	{
+		int compVal = p1.name.compareTo(p2.name);
+		if(compVal < 0 )
+		{
+			System.out.println(p2.getName() + " is greater than " + p1.getName());
+		}
+		else if(compVal > 0)
+		{
+			System.out.println(p1.getName() + " is greater than " + p2.getName());
+		}
+		else if(compVal == 0)
+		{
+			if(p1.getPrice() > p2.getPrice())
+			{
+				System.out.println(p1.getName() + " is greater than " + p2.getName());
+			}
+			else
+			{
+				System.out.println(p2.getName() + " is greater than " + p1.getName());
+			}
+		}
+		else
+		{
+			System.out.println("Something broke");
+		}
+		
+	}
 }
 
 class Gum extends Snack													//Class gum for gum products only
@@ -127,6 +190,9 @@ class Gum extends Snack													//Class gum for gum products only
 	public Gum(double price, String name, double snackWeight, boolean flavor)		//overloaded constructor, flavor pre-assigned, and price, name, weight, and flavor are passed in
 	{
 		this.chewy = flavor;
+		this.name = name;
+		this.price = price;
+		this.ounces = snackWeight;
 	}
 	public void setFlavor(boolean flavor)													//boolean var to guarantee that the user is purchasing gum
 	{
@@ -139,6 +205,34 @@ class Gum extends Snack													//Class gum for gum products only
 	public String toPrint()													//toString method created to print anything necessary
 	{
 		return "This is a pack of gum";
+	}
+	public void comparedTo(Product p1, Product p2)
+	{
+		int compVal = p1.name.compareTo(p2.name);
+		if(compVal < 0 )
+		{
+			System.out.println(p2.getName() + " is greater than " + p1.getName());
+		}
+		else if(compVal > 0)
+		{
+			System.out.println(p1.getName() + " is greater than " + p2.getName());
+		}
+		else if(compVal == 0)
+		{
+			if(p1.getPrice() > p2.getPrice())
+			{
+				System.out.println(p1.getName() + " is greater than " + p2.getName());
+			}
+			else
+			{
+				System.out.println(p2.getName() + " is greater than " + p1.getName());
+			}
+		}
+		else
+		{
+			System.out.println("Something broke");
+		}
+		
 	}
 }
 //----------DRINK BITS----------//
@@ -177,6 +271,9 @@ class energyDrinks extends Drink												//Class enerrgyDrinks for energy dri
 	public energyDrinks(double price, String name, double drinkWeight, boolean drinkFlavor) 		//overloaded constructor, flavor pre-assigned, and price, name, weight, and flavor are passed in
 	{
 		this.crappyTaste = drinkFlavor;
+		this.name = name;
+		this.price = price;
+		this.fluidOz = drinkWeight;
 	}
 	public void setFlavor(boolean drinkFlavor)									//set & get method so that product flavors can be changed
 	{
@@ -190,6 +287,34 @@ class energyDrinks extends Drink												//Class enerrgyDrinks for energy dri
 	{
 		return "This is an energy drink";
 	}
+	public void comparedTo(Product p1, Product p2)
+	{
+		int compVal = p1.name.compareTo(p2.name);
+		if(compVal < 0 )
+		{
+			System.out.println(p2.getName() + " is greater than " + p1.getName());
+		}
+		else if(compVal > 0)
+		{
+			System.out.println(p1.getName() + " is greater than " + p2.getName());
+		}
+		else if(compVal == 0)
+		{
+			if(p1.getPrice() > p2.getPrice())
+			{
+				System.out.println(p1.getName() + " is greater than " + p2.getName());
+			}
+			else
+			{
+				System.out.println(p2.getName() + " is greater than " + p1.getName());
+			}
+		}
+		else
+		{
+			System.out.println("Something broke");
+		}
+		
+	}
 }
 
 class water extends Drink												//Class water for water only
@@ -202,6 +327,9 @@ class water extends Drink												//Class water for water only
 	public water(double price, String name, double drinkWeight, boolean drinkFlavor) 		//overloaded constructor, flavor pre-assigned, and price, name, weight, and flavor are passed in
 	{
 		this.flat = drinkFlavor;
+		this.name = name;
+		this.price = price;
+		this.fluidOz = drinkWeight;
 	}
 	public void setFlavor(boolean drinkFlavor)									//set & get method so that product flavors can be changed
 	{
@@ -215,6 +343,34 @@ class water extends Drink												//Class water for water only
 	{
 		return "This is a water bottle";
 	}
+	public void comparedTo(Product p1, Product p2)
+	{
+		int compVal = p1.name.compareTo(p2.name);
+		if(compVal < 0 )
+		{
+			System.out.println(p2.getName() + " is greater than " + p1.getName());
+		}
+		else if(compVal > 0)
+		{
+			System.out.println(p1.getName() + " is greater than " + p2.getName());
+		}
+		else if(compVal == 0)
+		{
+			if(p1.getPrice() > p2.getPrice())
+			{
+				System.out.println(p1.getName() + " is greater than " + p2.getName());
+			}
+			else
+			{
+				System.out.println(p2.getName() + " is greater than " + p1.getName());
+			}
+		}
+		else
+		{
+			System.out.println("Something broke");
+		}
+		
+	}
 }
 
 class soda extends Drink												//Class soda for soda only
@@ -227,6 +383,9 @@ class soda extends Drink												//Class soda for soda only
 	public soda(double price, String name, double drinkWeight, boolean drinkFlavor) 		//overloaded constructor, flavor pre-assigned, and price, name, weight, and flavor are passed in
 	{
 		this.cloying = drinkFlavor;
+		this.name = name;
+		this.price = price;
+		this.fluidOz = drinkWeight;
 	}
 	public void setFlavor(boolean drinkFlavor)									//set & get method so that product flavors can be changed
 	{
@@ -240,6 +399,34 @@ class soda extends Drink												//Class soda for soda only
 	{
 		return "This is a soda";
 	}
+	public void comparedTo(Product p1, Product p2)
+	{
+		int compVal = p1.name.compareTo(p2.name);
+		if(compVal < 0 )
+		{
+			System.out.println(p2.getName() + " is greater than " + p1.getName());
+		}
+		else if(compVal > 0)
+		{
+			System.out.println(p1.getName() + " is greater than " + p2.getName());
+		}
+		else if(compVal == 0)
+		{
+			if(p1.getPrice() > p2.getPrice())
+			{
+				System.out.println(p1.getName() + " is greater than " + p2.getName());
+			}
+			else
+			{
+				System.out.println(p2.getName() + " is greater than " + p1.getName());
+			}
+		}
+		else
+		{
+			System.out.println("Something broke");
+		}
+		
+	}
 }
 
 class coffee extends Drink												//Class coffee for coffee only
@@ -252,6 +439,9 @@ class coffee extends Drink												//Class coffee for coffee only
 	public coffee(double price, String name, double drinkWeight, boolean drinkFlavor) 		//overloaded constructor, flavor pre-assigned, and price, name, weight, and flavor are passed in
 	{
 		this.hyper = drinkFlavor;
+		this.name = name;
+		this.price = price;
+		this.fluidOz = drinkWeight;
 	}
 	public void setFlavor(boolean drinkFlavor)									//set & get method so that product flavors can be changed
 	{
@@ -264,5 +454,33 @@ class coffee extends Drink												//Class coffee for coffee only
 	public String toPrint()													//toString method created to print anything necessary
 	{
 		return "This is a can of coffee";
+	}
+	public void comparedTo(Product p1, Product p2)
+	{
+		int compVal = p1.name.compareTo(p2.name);
+		if(compVal < 0 )
+		{
+			System.out.println(p2.getName() + " is greater than " + p1.getName());
+		}
+		else if(compVal > 0)
+		{
+			System.out.println(p1.getName() + " is greater than " + p2.getName());
+		}
+		else if(compVal == 0)
+		{
+			if(p1.getPrice() > p2.getPrice())
+			{
+				System.out.println(p1.getName() + " is greater than " + p2.getName());
+			}
+			else
+			{
+				System.out.println(p2.getName() + " is greater than " + p1.getName());
+			}
+		}
+		else
+		{
+			System.out.println("Something broke");
+		}
+		
 	}
 }
