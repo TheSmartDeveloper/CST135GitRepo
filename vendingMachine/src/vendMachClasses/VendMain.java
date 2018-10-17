@@ -1,9 +1,11 @@
 package vendMachClasses;
+import javafx.*;
 public class VendMain
 {
 
 	public static void main(String[] args)			//main method declared
 	{
+		//launch(args);
 		Dispenser machineOne = new Dispenser();			//Dispenser object created
 		Candy snickers = new Candy(1.00, "Snickers", 2.35, true);		//candy object created
 		Candy snickersXtreme = new Candy(2.00, "Snickers Xtreme", 2.35, true);		//candy object created
