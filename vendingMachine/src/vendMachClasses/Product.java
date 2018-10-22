@@ -91,7 +91,7 @@ class Candy extends Snack													//Class candy for candy products only
 	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
-		return this.getName() + "This is a candy bar";
+		return getName() + " is $" + getPrice();
 	}
 	//@Override
 	public void comparedTo(Product p1, Product p2)
@@ -148,7 +148,7 @@ class Chips extends Snack													//Class chips for chips products only
 	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
-		return "This is a bag of chips";
+		return getName() + " is $" + getPrice();
 	}
 	public void comparedTo(Product p1, Product p2)
 	{
@@ -204,7 +204,7 @@ class Gum extends Snack													//Class gum for gum products only
 	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
-		return "This is a pack of gum";
+		return getName() + " is $" + getPrice();
 	}
 	public void comparedTo(Product p1, Product p2)
 	{
@@ -285,7 +285,7 @@ class energyDrinks extends Drink												//Class enerrgyDrinks for energy dri
 	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
-		return "This is an energy drink";
+		return getName() + " is $" + getPrice();
 	}
 	public void comparedTo(Product p1, Product p2)
 	{
@@ -341,7 +341,7 @@ class water extends Drink												//Class water for water only
 	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
-		return "This is a water bottle";
+		return getName() + " is $" + getPrice();
 	}
 	public void comparedTo(Product p1, Product p2)
 	{
@@ -397,7 +397,7 @@ class soda extends Drink												//Class soda for soda only
 	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
-		return "This is a soda";
+		return getName() + " is $" + getPrice();
 	}
 	public void comparedTo(Product p1, Product p2)
 	{
@@ -453,7 +453,7 @@ class coffee extends Drink												//Class coffee for coffee only
 	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
-		return "This is a can of coffee";
+		return getName() + " is $" + getPrice();
 	}
 	public void comparedTo(Product p1, Product p2)
 	{
