@@ -19,7 +19,7 @@ public class Dispenser
 	{
 		return count++;
 	}
-	public int getCount()
+	public int getCount()				//method to get count for bookeeping purposes
 	{
 		return count;
 	}

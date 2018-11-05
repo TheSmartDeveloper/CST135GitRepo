@@ -25,10 +25,10 @@ public class VendMain extends Application
 	{
 		//ALL GRIDS & SCENES CREATION
 		
-		TranslateTransition test = new TranslateTransition();
-		StackPane root = new StackPane();
+		TranslateTransition test = new TranslateTransition();		//animation method created
+		StackPane root = new StackPane();	//created to show message above gridpane
 		GridPane drinkSnackSelector = new GridPane();
-		Pane pane1 = new Pane();
+		Pane pane1 = new Pane();		//pane that label will exist on
 		Label Rules = new Label("Total number of one item that can be purchased is 10");
 		Rules.setAlignment(Pos.CENTER);
 		pane1.getChildren().add(Rules);
@@ -106,18 +106,18 @@ public class VendMain extends Application
 		sbCarmFrap.setOnAction(e-> 
 		{
 			sbcmf_D.dispenseItem();			//bring count down
-			if(sbcmf_D.getCount() >= 0)
+			if(sbcmf_D.getCount() >= 0)		//only update totals if there are more than 0 items in the vending machine
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(SbCarmFrap.price);
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(sbCarmFrap);
-			test.play();
+			test.setToY(500);		//move button down
+			test.setAutoReverse(true);		//bring button back up after going down
+			test.setCycleCount(2);		//essentially go down then back up (each is one cycle)
+			test.setNode(sbCarmFrap);		//act on button
+			test.play();		//play the animation
 		});
 		
 		coffee SbCoffFrap = new coffee(1.25, "Starbucks Coffee Frappucinno", 8.0, true);
