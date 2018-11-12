@@ -38,12 +38,14 @@ public class VendMain extends Application
 		GridPane drinkPane = new GridPane();
 		Scene getDrink = new Scene(drinkPane);
 		
-		
 		GridPane snackPane = new GridPane();
 		Scene getSnack = new Scene(snackPane);
 		
 		GridPane totalPane = new GridPane();
 		Scene totalScene = new Scene(totalPane);
+		
+		GridPane servicePane = new GridPane();
+		Scene serviceScene = new Scene(servicePane);
 		
 		transaction updateTotal = new transaction();
 		
@@ -65,6 +67,7 @@ public class VendMain extends Application
 		
 		Button Service = new Button("Service Mode");
 		drinkSnackSelector.add(Service, 3, 1);
+		Service.setOnAction(e -> primaryStage.setScene(serviceScene));
 		
 		//TOTAL PANE - PART 1
 		totalPane.setAlignment(Pos.CENTER);
@@ -110,14 +113,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(SbCarmFrap.price);
+				test.setToY(500);		//move button down
+				test.setAutoReverse(true);		//bring button back up after going down
+				test.setCycleCount(2);		//essentially go down then back up (each is one cycle)
+				test.setNode(sbCarmFrap);		//act on button
+				test.play();		//play the animation
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);		//move button down
-			test.setAutoReverse(true);		//bring button back up after going down
-			test.setCycleCount(2);		//essentially go down then back up (each is one cycle)
-			test.setNode(sbCarmFrap);		//act on button
-			test.play();		//play the animation
+			
 		});
 		
 		coffee SbCoffFrap = new coffee(1.25, "Starbucks Coffee Frappucinno", 8.0, true);
@@ -132,14 +136,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(SbCoffFrap.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(sbCoffFrap);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(sbCoffFrap);
-			test.play();
+			
 		});
 		
 		coffee SbPSL = new coffee(2.25, "Starbucks Pumpkin Spice Latte", 8.0, true);
@@ -154,14 +159,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(SbPSL.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(sbPSL);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(sbPSL);
-			test.play();
+			
 		});
 		
 		coffee SbColBru = new coffee(.85, "Starbucks Cold Brew Black", 8.0, true);
@@ -176,14 +182,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(SbColBru.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(sbColBru);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(sbColBru);
-			test.play();
+			
 		});
 						
 		water dasani = new water(1.0, "Dasani", 16.9, true);
@@ -198,14 +205,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(dasani.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Dasani);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Dasani);
-			test.play();
+			
 		});
 		
 		water aquafina = new water(1.0, "Aquafina", 16.9, true);
@@ -220,14 +228,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(aquafina.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Aquafina);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Aquafina);
-			test.play();
+			
 		});
 		
 		water kirkland = new water(.75, "Kirkland Signature", 16.9, true);
@@ -242,14 +251,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(kirkland.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Kirkland);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Kirkland);
-			test.play();
+			
 		});
 		
 		water memMark = new water(1.0, "Memeber's Mark", 16.9, true);
@@ -264,14 +274,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(memMark.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(MemMark);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(MemMark);
-			test.play();
+			
 		});
 						
 		energyDrinks Monster = new energyDrinks(2.0, "Monster", 10, true);
@@ -286,14 +297,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(Monster.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(monster);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(monster);
-			test.play();
+			
 		});
 		
 		energyDrinks RedBull = new energyDrinks(2.50, "Red Bull", 10, true);
@@ -308,14 +320,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(RedBull.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(redBull);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(redBull);
-			test.play();
+			
 		});
 		
 		energyDrinks FHE = new energyDrinks(2.50, "Five Hour Energy", 2, true);
@@ -330,14 +343,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(FHE.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(fiveHourE);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(fiveHourE);
-			test.play();
+			
 		});
 		
 		energyDrinks AMP = new energyDrinks(1.50, "AMP", 10, true);
@@ -352,14 +366,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(AMP.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(amp);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(amp);
-			test.play();
+			
 		});
 						
 		soda cocaC = new soda(1.50, "Coca Cola", 8, true);
@@ -374,14 +389,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(cocaC.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(CocaCola);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(CocaCola);
-			test.play();
+			
 		});
 		
 		soda sprite = new soda(1.50, "Sprite", 8, true);
@@ -396,14 +412,14 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(sprite.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Sprite);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Sprite);
-			test.play();
 		});
 		
 		soda fanta = new soda(1.25, "Fanta", 8, true);
@@ -418,14 +434,14 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(fanta.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Fanta);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Fanta);
-			test.play();
 		});
 		
 		soda pepsi = new soda(1.50, "Pepsi", 8, true);
@@ -440,18 +456,16 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(pepsi.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Pepsi);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Pepsi);
-			test.play();
+			
 		});
-		
-		/*Label Limit = new Label("The total number of items that you are allowed to purchase at one time is 10");
-		drinkPane.add(Limit, 1, 5);*/
 				
 		Button backFromDrinks = new Button("Back");
 		drinkPane.add(backFromDrinks, 5, 1);
@@ -480,16 +494,15 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(five.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Five);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Five);
-			test.play();
 		});
-		
 		
 		Gum orbit = new Gum(.75, "Orbit", 1, true);
 		Button Orbit = new Button(orbit.toPrint());
@@ -503,14 +516,14 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(orbit.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Orbit);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Orbit);
-			test.play();
 		});
 		
 		Gum juicyFruit = new Gum(.75, "Juicy Fruit", 1, true);
@@ -525,14 +538,14 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(juicyFruit.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(JFruit);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(JFruit);
-			test.play();
 		});
 						
 		Chips lays = new Chips(1.00, "Lays", 2.21, true);
@@ -547,14 +560,14 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(lays.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Lays);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Lays);
-			test.play();
 		});
 		
 		Chips doritos = new Chips(1.00, "Doritos", 2.18, true);
@@ -569,14 +582,14 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(doritos.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Doritos);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Doritos);
-			test.play();
 		});
 		
 		Chips ruffles = new Chips(1.00, "Ruffles", 2.05, true);
@@ -591,14 +604,14 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(ruffles.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Ruffles);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Ruffles);
-			test.play();
 		});
 						
 		Candy snickers = new Candy(1.00, "Snickers", 2.35, true);
@@ -610,17 +623,18 @@ public class VendMain extends Application
 		{
 			snickers_D.dispenseItem();			//bring count down
 			if(snickers_D.getCount() >= 0)
-			{
+			{				
 				updateTotal.setItems();
 				updateTotal.setPrice(snickers.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Snickers);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Snickers);
-			test.play();
+			
 		});
 		
 		Candy MMS = new Candy(1.25,"M&M's", 2.44, true);
@@ -635,14 +649,14 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(MMS.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(mms);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(mms);
-			test.play();
 		});
 		
 		Candy reeses = new Candy(1.25,"Reeses", 2.44, true);
@@ -657,14 +671,14 @@ public class VendMain extends Application
 			{
 				updateTotal.setItems();
 				updateTotal.setPrice(reeses.price);
+				test.setToY(500);
+				test.setAutoReverse(true);
+				test.setCycleCount(2);
+				test.setNode(Reeses);
+				test.play();
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
-			test.setToY(500);
-			test.setAutoReverse(true);
-			test.setCycleCount(2);
-			test.setNode(Reeses);
-			test.play();
 		});	
 						
 		Button backFromSnacks = new Button("Back");
@@ -679,41 +693,102 @@ public class VendMain extends Application
 		purchase.setOnAction(e ->
 		{
 			updateTotal.resetIandP();
+			sbcmf_D.atBought();
+			sbcf_D.atBought();
+			sbpsl_D.atBought();
+			sbcb_D.atBought();
+			dasani_D.atBought();
+			aquaf_D.atBought();
+			kirk_D.atBought();
+			memMark_D.atBought();
+			monster_D.atBought();
+			redB_D.atBought();
+			fhe_D.atBought();
+			amp_D.atBought();
+			cc_D.atBought();
+			sprite_D.atBought();
+			fanta_D.atBought();
+			pepsi_D.atBought();
+			five_D.atBought();
+			orbit_D.atBought();
+			juicyFruit_D.atBought();
+			lays_D.atBought();
+			doritos_D.atBought();
+			ruffles_D.atBought();
+			snickers_D.atBought();
+			mms_D.cancel();
+			reeses_D.cancel();
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
 		});
 		cancel.setOnAction(e ->
 		{
 			updateTotal.resetIandP();
-			sbcmf_D.loadMachine();
-			sbcf_D.loadMachine();
-			sbpsl_D.loadMachine();
-			sbcb_D.loadMachine();
-			dasani_D.loadMachine();
-			aquaf_D.loadMachine();
-			kirk_D.loadMachine();
-			memMark_D.loadMachine();
-			monster_D.loadMachine();
-			redB_D.loadMachine();
-			fhe_D.loadMachine();
-			amp_D.loadMachine();
-			cc_D.loadMachine();
-			sprite_D.loadMachine();
-			fanta_D.loadMachine();
-			pepsi_D.loadMachine();
-			five_D.loadMachine();
-			orbit_D.loadMachine();
-			juicyFruit_D.loadMachine();
-			lays_D.loadMachine();
-			doritos_D.loadMachine();
-			ruffles_D.loadMachine();
-			snickers_D.loadMachine();
-			mms_D.loadMachine();
-			reeses_D.loadMachine();
+			sbcmf_D.cancel();
+			sbcf_D.cancel();
+			sbpsl_D.cancel();
+			sbcb_D.cancel();
+			dasani_D.cancel();
+			aquaf_D.cancel();
+			kirk_D.cancel();
+			memMark_D.cancel();
+			monster_D.cancel();
+			redB_D.cancel();
+			fhe_D.cancel();
+			amp_D.cancel();
+			cc_D.cancel();
+			sprite_D.cancel();
+			fanta_D.cancel();
+			pepsi_D.cancel();
+			five_D.cancel();
+			orbit_D.cancel();
+			juicyFruit_D.cancel();
+			lays_D.cancel();
+			doritos_D.cancel();
+			ruffles_D.cancel();
+			snickers_D.cancel();
+			mms_D.cancel();
+			reeses_D.cancel();
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
 		});
+		//SERVICE PANE
+		servicePane.setAlignment(Pos.CENTER);
+		servicePane.setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
+		servicePane.setHgap(5.5);
+		servicePane.setVgap(5.5);
 		
+		Label Items = new Label("There are " + sbcmf_D.getCount() + " " + SbCarmFrap.toPrint() + "\n" + 
+								"There are " + sbcf_D.getCount() + " " + SbCoffFrap.toPrint() + "\n" + 
+								"There are " + sbpsl_D.getCount() + " " + SbPSL.toPrint() + "\n" + 
+								"There are " + sbcb_D.getCount() + " " + SbColBru.toPrint() + "\n" + 
+								"There are " + dasani_D.getCount() + " " + dasani.toPrint() + "\n" + 
+								"There are " + aquaf_D.getCount() + " " + aquafina.toPrint() + "\n" + 
+								"There are " + kirk_D.getCount() + " " + kirkland.toPrint() + "\n" + 
+								"There are " + memMark_D.getCount() + " " + memMark.toPrint() + "\n" + 
+								"There are " + monster_D.getCount() + " " + Monster.toPrint() + "\n" + 
+								"There are " + redB_D.getCount() + " " + RedBull.toPrint() + "\n" + 
+								"There are " + fhe_D.getCount() + " " + FHE.toPrint() + "\n" + 
+								"There are " + amp_D.getCount() + " " + AMP.toPrint() + "\n" + 
+								"There are " + cc_D.getCount() + " " + cocaC.toPrint() + "\n" + 
+								"There are " + sprite_D.getCount() + " " + sprite.toPrint() + "\n" + 
+								"There are " + fanta_D.getCount() + " " + fanta.toPrint() + "\n" + 
+								"There are " + pepsi_D.getCount() + " " + pepsi.toPrint() + "\n" + 
+								"There are " + five_D.getCount() + " " + five.toPrint() + "\n" + 
+								"There are " + orbit_D.getCount() + " " + orbit.toPrint() + "\n" + 
+								"There are " + juicyFruit_D.getCount() + " " + juicyFruit.toPrint() + "\n" + 
+								"There are " + lays_D.getCount() + " " + lays.toPrint() + "\n" + 
+								"There are " + doritos_D.getCount() + " " + doritos.toPrint() + "\n" + 
+								"There are " + ruffles_D.getCount() + " " + ruffles.toPrint() + "\n" + 
+								"There are " + snickers_D.getCount() + " " + snickers.toPrint() + "\n" + 
+								"There are " + mms_D.getCount() + " " + MMS.toPrint() + "\n" + 
+								"There are " + reeses_D.getCount() + " " + reeses.toPrint());
+		
+		Button backFromService = new Button("Back");
+		servicePane.add(Items, 1, 1);
+		servicePane.add(backFromService, 2, 1);
+		backFromService.setOnAction(e -> primaryStage.setScene(selectItem));
+				
 		//RUN THE WHOLE THING
 		
 		primaryStage.setTitle("Vending Machine");

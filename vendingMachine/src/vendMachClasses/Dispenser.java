@@ -8,12 +8,18 @@ public class Dispenser
 	int[] columnID = new int[NUM_COLUMNS];								//each column gets a unique id
 	int[] columnPrice = new int[NUM_COLUMNS];							//each column has a unique price
 	int[] columnSnackCount = new int[COLUMN_SIZE];						//each column has a counter with the number of snacks
-	Product empty = new Candy(0.00, "Empty", 0.00, false);
+//	Product empty = new Candy(0.00, "Empty", 0.00, false);
 	int count = 10;
+	int toBuy = 0;
 	
-	public int dispenseItem()								//method to dispense items, will set a certain row to 0 since a row cannot have more than one item because this is a vertical 2d machine not a 3d machine
+	public void dispenseItem()								//method to dispense items, will set a certain row to 0 since a row cannot have more than one item because this is a vertical 2d machine not a 3d machine
 	{
-		return count--;
+		toBuy++;
+		count--;
+	}
+	public void atBought()
+	{
+		toBuy = 0;
 	}
 	public int loadMachine()							//method to ad items, will set a certain row to 1 since a row cannot have more than one item because this is a vertical 2d machine not a 3d machine
 	{
@@ -22,6 +28,11 @@ public class Dispenser
 	public int getCount()				//method to get count for bookeeping purposes
 	{
 		return count;
+	}
+	public void cancel()
+	{
+		count = count + toBuy;
+		toBuy = 0;
 	}
 	public int displayProducts()										//print out the array
 	{
