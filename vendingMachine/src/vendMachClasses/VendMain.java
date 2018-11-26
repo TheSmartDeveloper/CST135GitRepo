@@ -1,4 +1,5 @@
 package vendMachClasses;
+import java.io.FileNotFoundException;
 import java.time.Duration;
 
 import javafx.animation.Animation;
@@ -24,7 +25,7 @@ public class VendMain extends Application
 	public void start(Stage primaryStage) throws Exception
 	{
 		//ALL GRIDS & SCENES CREATION
-		
+		Restock LowOrPO = new Restock();
 		TranslateTransition test = new TranslateTransition();		//animation method created
 		StackPane root = new StackPane();	//created to show message above gridpane
 		GridPane drinkSnackSelector = new GridPane();
@@ -118,6 +119,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);		//essentially go down then back up (each is one cycle)
 				test.setNode(sbCarmFrap);		//act on button
 				test.play();		//play the animation
+				if(sbcmf_D.getCount() <= 3)
+				{
+					sbCarmFrap.setText(SbCarmFrap.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -141,6 +146,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(sbCoffFrap);
 				test.play();
+				if(sbcf_D.getCount() <= 3)
+				{
+					sbCoffFrap.setText(SbCoffFrap.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -164,6 +173,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(sbPSL);
 				test.play();
+				if(sbpsl_D.getCount() <= 3)
+				{
+					sbPSL.setText(SbPSL.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -187,6 +200,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(sbColBru);
 				test.play();
+				if(sbcb_D.getCount() <= 3)
+				{
+					sbColBru.setText(SbColBru.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -210,6 +227,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Dasani);
 				test.play();
+				if(dasani_D.getCount() <= 3)
+				{
+					Dasani.setText(dasani.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -233,6 +254,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Aquafina);
 				test.play();
+				if(aquaf_D.getCount() <= 3)
+				{
+					Aquafina.setText(aquafina.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -256,6 +281,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Kirkland);
 				test.play();
+				if(kirk_D.getCount() <= 3)
+				{
+					Kirkland.setText(kirkland.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -279,6 +308,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(MemMark);
 				test.play();
+				if(memMark_D.getCount() <= 3)
+				{
+					MemMark.setText(memMark.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -302,6 +335,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(monster);
 				test.play();
+				if(monster_D.getCount() <= 3)
+				{
+					monster.setText(Monster.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -325,6 +362,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(redBull);
 				test.play();
+				if(redB_D.getCount() <= 3)
+				{
+					redBull.setText(RedBull.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -348,6 +389,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(fiveHourE);
 				test.play();
+				if(fhe_D.getCount() <= 3)
+				{
+					fiveHourE.setText(FHE.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -371,6 +416,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(amp);
 				test.play();
+				if(amp_D.getCount() <= 3)
+				{
+					amp.setText(AMP.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -394,6 +443,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(CocaCola);
 				test.play();
+				if(cc_D.getCount() <= 3)
+				{
+					CocaCola.setText(cocaC.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -417,6 +470,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Sprite);
 				test.play();
+				if(sprite_D.getCount() <= 3)
+				{
+					Sprite.setText(sprite.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -439,6 +496,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Fanta);
 				test.play();
+				if(fanta_D.getCount() <= 3)
+				{
+					Fanta.setText(fanta.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -461,6 +522,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Pepsi);
 				test.play();
+				if(pepsi_D.getCount() <= 3)
+				{
+					Pepsi.setText(pepsi.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -499,6 +564,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Five);
 				test.play();
+				if(five_D.getCount() <= 3)
+				{
+					Five.setText(five.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -521,6 +590,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Orbit);
 				test.play();
+				if(orbit_D.getCount() <= 3)
+				{
+					Orbit.setText(orbit.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -543,6 +616,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(JFruit);
 				test.play();
+				if(juicyFruit_D.getCount() <= 3)
+				{
+					JFruit.setText(juicyFruit.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -565,6 +642,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Lays);
 				test.play();
+				if(lays_D.getCount() <= 3)
+				{
+					Lays.setText(lays.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -587,6 +668,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Doritos);
 				test.play();
+				if(doritos_D.getCount() <= 3)
+				{
+					Doritos.setText(doritos.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -609,6 +694,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Ruffles);
 				test.play();
+				if(ruffles_D.getCount() <= 3)
+				{
+					Ruffles.setText(ruffles.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -631,6 +720,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Snickers);
 				test.play();
+				if(snickers_D.getCount() <= 3)
+				{
+					Snickers.setText(snickers.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -654,6 +747,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(mms);
 				test.play();
+				if(mms_D.getCount() <= 3)
+				{
+					mms.setText(MMS.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -676,6 +773,10 @@ public class VendMain extends Application
 				test.setCycleCount(2);
 				test.setNode(Reeses);
 				test.play();
+				if(reeses_D.getCount() <= 3)
+				{
+					Reeses.setText(reeses.toPrint() + LowOrPO.declareLowInventory());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -753,41 +854,171 @@ public class VendMain extends Application
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
 		});
 		//SERVICE PANE
+		InventoryManager inventoryLists = new InventoryManager();
 		servicePane.setAlignment(Pos.CENTER);
 		servicePane.setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
 		servicePane.setHgap(5.5);
 		servicePane.setVgap(5.5);
 		
-		Label Items = new Label("There are " + sbcmf_D.getCount() + " " + SbCarmFrap.toPrint() + "\n" + 
-								"There are " + sbcf_D.getCount() + " " + SbCoffFrap.toPrint() + "\n" + 
-								"There are " + sbpsl_D.getCount() + " " + SbPSL.toPrint() + "\n" + 
-								"There are " + sbcb_D.getCount() + " " + SbColBru.toPrint() + "\n" + 
-								"There are " + dasani_D.getCount() + " " + dasani.toPrint() + "\n" + 
-								"There are " + aquaf_D.getCount() + " " + aquafina.toPrint() + "\n" + 
-								"There are " + kirk_D.getCount() + " " + kirkland.toPrint() + "\n" + 
-								"There are " + memMark_D.getCount() + " " + memMark.toPrint() + "\n" + 
-								"There are " + monster_D.getCount() + " " + Monster.toPrint() + "\n" + 
-								"There are " + redB_D.getCount() + " " + RedBull.toPrint() + "\n" + 
-								"There are " + fhe_D.getCount() + " " + FHE.toPrint() + "\n" + 
-								"There are " + amp_D.getCount() + " " + AMP.toPrint() + "\n" + 
-								"There are " + cc_D.getCount() + " " + cocaC.toPrint() + "\n" + 
-								"There are " + sprite_D.getCount() + " " + sprite.toPrint() + "\n" + 
-								"There are " + fanta_D.getCount() + " " + fanta.toPrint() + "\n" + 
-								"There are " + pepsi_D.getCount() + " " + pepsi.toPrint() + "\n" + 
-								"There are " + five_D.getCount() + " " + five.toPrint() + "\n" + 
-								"There are " + orbit_D.getCount() + " " + orbit.toPrint() + "\n" + 
-								"There are " + juicyFruit_D.getCount() + " " + juicyFruit.toPrint() + "\n" + 
-								"There are " + lays_D.getCount() + " " + lays.toPrint() + "\n" + 
-								"There are " + doritos_D.getCount() + " " + doritos.toPrint() + "\n" + 
-								"There are " + ruffles_D.getCount() + " " + ruffles.toPrint() + "\n" + 
-								"There are " + snickers_D.getCount() + " " + snickers.toPrint() + "\n" + 
-								"There are " + mms_D.getCount() + " " + MMS.toPrint() + "\n" + 
-								"There are " + reeses_D.getCount() + " " + reeses.toPrint());
-		
+		Label Items = new Label("label");
+		Button showStats = new Button("Update/Display Inventory");
+		servicePane.add(showStats, 2, 1);
+		showStats.setOnAction(e ->
+		{
+			Items.setText("There are " + sbcmf_D.getCount() + " " + SbCarmFrap.toPrint() + "\n" + 
+					"There are " + sbcf_D.getCount() + " " + SbCoffFrap.toPrint() + "\n" + 
+					"There are " + sbpsl_D.getCount() + " " + SbPSL.toPrint() + "\n" + 
+					"There are " + sbcb_D.getCount() + " " + SbColBru.toPrint() + "\n" + 
+					"There are " + dasani_D.getCount() + " " + dasani.toPrint() + "\n" + 
+					"There are " + aquaf_D.getCount() + " " + aquafina.toPrint() + "\n" + 
+					"There are " + kirk_D.getCount() + " " + kirkland.toPrint() + "\n" + 
+					"There are " + memMark_D.getCount() + " " + memMark.toPrint() + "\n" + 
+					"There are " + monster_D.getCount() + " " + Monster.toPrint() + "\n" + 
+					"There are " + redB_D.getCount() + " " + RedBull.toPrint() + "\n" + 
+					"There are " + fhe_D.getCount() + " " + FHE.toPrint() + "\n" + 
+					"There are " + amp_D.getCount() + " " + AMP.toPrint() + "\n" + 
+					"There are " + cc_D.getCount() + " " + cocaC.toPrint() + "\n" + 
+					"There are " + sprite_D.getCount() + " " + sprite.toPrint() + "\n" + 
+					"There are " + fanta_D.getCount() + " " + fanta.toPrint() + "\n" + 
+					"There are " + pepsi_D.getCount() + " " + pepsi.toPrint() + "\n" + 
+					"There are " + five_D.getCount() + " " + five.toPrint() + "\n" + 
+					"There are " + orbit_D.getCount() + " " + orbit.toPrint() + "\n" + 
+					"There are " + juicyFruit_D.getCount() + " " + juicyFruit.toPrint() + "\n" + 
+					"There are " + lays_D.getCount() + " " + lays.toPrint() + "\n" + 
+					"There are " + doritos_D.getCount() + " " + doritos.toPrint() + "\n" + 
+					"There are " + ruffles_D.getCount() + " " + ruffles.toPrint() + "\n" + 
+					"There are " + snickers_D.getCount() + " " + snickers.toPrint() + "\n" + 
+					"There are " + mms_D.getCount() + " " + MMS.toPrint() + "\n" + 
+					"There are " + reeses_D.getCount() + " " + reeses.toPrint());
+		});
 		Button backFromService = new Button("Back");
 		servicePane.add(Items, 1, 1);
-		servicePane.add(backFromService, 2, 1);
-		backFromService.setOnAction(e -> primaryStage.setScene(selectItem));
+		servicePane.add(backFromService, 2, 2);
+		backFromService.setOnAction(e -> 
+		{
+			primaryStage.setScene(selectItem);
+		});
+		
+		Button writeOut = new Button("Print Inventory.csv");
+		servicePane.add(writeOut, 2, 3);
+		writeOut.setOnAction(e->
+		{
+			String[] prodArray = {SbCarmFrap.arrayPrint(),
+					   SbCoffFrap.arrayPrint(),
+					   SbPSL.arrayPrint(),
+					   SbColBru.arrayPrint(),
+					   dasani.arrayPrint(),
+					   aquafina.arrayPrint(),
+					   kirkland.arrayPrint(),
+					   memMark.arrayPrint(),
+					   Monster.arrayPrint(),
+					   RedBull.arrayPrint(),
+					   FHE.arrayPrint(),
+					   AMP.arrayPrint(),
+					   cocaC.arrayPrint(),
+					   sprite.arrayPrint(),
+					   fanta.arrayPrint(),
+					   pepsi.arrayPrint(),
+					   five.arrayPrint(),
+					   orbit.arrayPrint(),
+					   juicyFruit.arrayPrint(), 
+					   lays.arrayPrint(),
+					   doritos.arrayPrint(),
+					   ruffles.arrayPrint(),
+					   snickers.arrayPrint(),
+					   MMS.arrayPrint(),
+					   reeses.arrayPrint()};
+			int[] dispArray = {sbcmf_D.getCount(),
+					   sbcf_D.getCount(),
+					   sbpsl_D.getCount(),
+					   sbcb_D.getCount(), 
+					   dasani_D.getCount(),
+					   aquaf_D.getCount(),
+					   kirk_D.getCount(),
+					   memMark_D.getCount(),
+					   monster_D.getCount(),
+					   redB_D.getCount(),
+					   fhe_D.getCount(),
+					   amp_D.getCount(),
+					   cc_D.getCount(),
+					   sprite_D.getCount(),
+					   fanta_D.getCount(),
+					   pepsi_D.getCount(),
+					   five_D.getCount(),
+					   orbit_D.getCount(),
+					   juicyFruit_D.getCount(),
+					   lays_D.getCount(),
+					   doritos_D.getCount(),
+					   ruffles_D.getCount(),
+					   snickers_D.getCount(),
+					   mms_D.getCount(),
+					   reeses_D.getCount()};
+			try
+			{
+				inventoryLists.writeOut(prodArray, dispArray);
+			} catch (FileNotFoundException e1)
+			{
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
+		});
+		Button addItems = new Button("Load the Machine with 1 more item");
+		servicePane.add(addItems, 1, 3);
+		addItems.setOnAction(e->
+		{
+			sbcmf_D.loadMachine();
+			sbcf_D.loadMachine();
+			sbpsl_D.loadMachine();
+			sbcb_D.loadMachine();
+			dasani_D.loadMachine();
+			aquaf_D.loadMachine();
+			kirk_D.loadMachine();
+			memMark_D.loadMachine();
+			monster_D.loadMachine();
+			redB_D.loadMachine();
+			fhe_D.loadMachine();
+			amp_D.loadMachine();
+			cc_D.loadMachine();
+			sprite_D.loadMachine();
+			fanta_D.loadMachine();
+			pepsi_D.loadMachine();
+			five_D.loadMachine();
+			orbit_D.loadMachine();
+			juicyFruit_D.loadMachine();
+			lays_D.loadMachine();
+			doritos_D.loadMachine();
+			ruffles_D.loadMachine();
+			snickers_D.loadMachine();
+			mms_D.loadMachine();
+			reeses_D.loadMachine();
+			
+			Items.setText("There are " + sbcmf_D.getCount() + " " + SbCarmFrap.toPrint() + "\n" + 
+					"There are " + sbcf_D.getCount() + " " + SbCoffFrap.toPrint() + "\n" + 
+					"There are " + sbpsl_D.getCount() + " " + SbPSL.toPrint() + "\n" + 
+					"There are " + sbcb_D.getCount() + " " + SbColBru.toPrint() + "\n" + 
+					"There are " + dasani_D.getCount() + " " + dasani.toPrint() + "\n" + 
+					"There are " + aquaf_D.getCount() + " " + aquafina.toPrint() + "\n" + 
+					"There are " + kirk_D.getCount() + " " + kirkland.toPrint() + "\n" + 
+					"There are " + memMark_D.getCount() + " " + memMark.toPrint() + "\n" + 
+					"There are " + monster_D.getCount() + " " + Monster.toPrint() + "\n" + 
+					"There are " + redB_D.getCount() + " " + RedBull.toPrint() + "\n" + 
+					"There are " + fhe_D.getCount() + " " + FHE.toPrint() + "\n" + 
+					"There are " + amp_D.getCount() + " " + AMP.toPrint() + "\n" + 
+					"There are " + cc_D.getCount() + " " + cocaC.toPrint() + "\n" + 
+					"There are " + sprite_D.getCount() + " " + sprite.toPrint() + "\n" + 
+					"There are " + fanta_D.getCount() + " " + fanta.toPrint() + "\n" + 
+					"There are " + pepsi_D.getCount() + " " + pepsi.toPrint() + "\n" + 
+					"There are " + five_D.getCount() + " " + five.toPrint() + "\n" + 
+					"There are " + orbit_D.getCount() + " " + orbit.toPrint() + "\n" + 
+					"There are " + juicyFruit_D.getCount() + " " + juicyFruit.toPrint() + "\n" + 
+					"There are " + lays_D.getCount() + " " + lays.toPrint() + "\n" + 
+					"There are " + doritos_D.getCount() + " " + doritos.toPrint() + "\n" + 
+					"There are " + ruffles_D.getCount() + " " + ruffles.toPrint() + "\n" + 
+					"There are " + snickers_D.getCount() + " " + snickers.toPrint() + "\n" + 
+					"There are " + mms_D.getCount() + " " + MMS.toPrint() + "\n" + 
+					"There are " + reeses_D.getCount() + " " + reeses.toPrint());
+		});
 				
 		//RUN THE WHOLE THING
 		

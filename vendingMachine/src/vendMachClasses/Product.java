@@ -122,6 +122,10 @@ class Candy extends Snack													//Class candy for candy products only
 		}
 		
 	}
+	public String arrayPrint()
+	{
+		return getName().toString() + ",$" + getPrice() + "," + getWeight() + "," + getFlavor();
+	}
 }
 
 class Chips extends Snack													//Class chips for chips products only
@@ -178,6 +182,10 @@ class Chips extends Snack													//Class chips for chips products only
 		}
 		
 	}
+	public String arrayPrint()
+	{
+		return getName().toString() + ",$" + getPrice() + "," + getWeight() + "," + getFlavor();
+	}
 }
 
 class Gum extends Snack													//Class gum for gum products only
@@ -233,6 +241,10 @@ class Gum extends Snack													//Class gum for gum products only
 			System.out.println("Something broke");
 		}
 		
+	}
+	public String arrayPrint()
+	{
+		return getName().toString() + ",$" + getPrice() + "," + getWeight() + "," + getFlavor();
 	}
 }
 //----------DRINK BITS----------//
@@ -315,6 +327,10 @@ class energyDrinks extends Drink												//Class enerrgyDrinks for energy dri
 		}
 		
 	}
+	public String arrayPrint()
+	{
+		return getName().toString() + ",$" + getPrice() + "," + getDrinkWeight() + "," + getFlavor();
+	}
 }
 
 class water extends Drink												//Class water for water only
@@ -370,6 +386,10 @@ class water extends Drink												//Class water for water only
 			System.out.println("Something broke");
 		}
 		
+	}
+	public String arrayPrint()
+	{
+		return getName().toString() + ",$" + getPrice() + "," + getDrinkWeight() + "," + getFlavor();
 	}
 }
 
@@ -427,6 +447,10 @@ class soda extends Drink												//Class soda for soda only
 		}
 		
 	}
+	public String arrayPrint()
+	{
+		return getName().toString() + ",$" + getPrice() + "," + getDrinkWeight() + "," + getFlavor();
+	}
 }
 
 class coffee extends Drink												//Class coffee for coffee only
@@ -482,5 +506,9 @@ class coffee extends Drink												//Class coffee for coffee only
 			System.out.println("Something broke");
 		}
 		
+	}
+	public String arrayPrint()
+	{
+		return getName().toString() + ",$" + getPrice() + "," + getDrinkWeight() + "," + getFlavor();
 	}
 }

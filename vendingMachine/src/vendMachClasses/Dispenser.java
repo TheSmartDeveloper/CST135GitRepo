@@ -15,7 +15,10 @@ public class Dispenser
 	public void dispenseItem()								//method to dispense items, will set a certain row to 0 since a row cannot have more than one item because this is a vertical 2d machine not a 3d machine
 	{
 		toBuy++;
-		count--;
+		if(count > -1)
+		{
+			count--;
+		}
 	}
 	public void atBought()
 	{

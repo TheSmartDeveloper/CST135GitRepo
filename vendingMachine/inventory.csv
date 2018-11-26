@@ -1,0 +1,26 @@
+Name,Price,Weight,Flavor,Count
+Starbucks Carmel Frappucinno,$1.5,8.0,true,10
+Starbucks Coffee Frappucinno,$1.25,8.0,true,10
+Starbucks Pumpkin Spice Latte,$2.25,8.0,true,10
+Starbucks Cold Brew Black,$0.85,8.0,true,10
+Dasani,$1.0,16.9,true,10
+Aquafina,$1.0,16.9,true,9
+Kirkland Signature,$0.75,16.9,true,10
+Memeber's Mark,$1.0,16.9,true,10
+Monster,$2.0,10.0,true,10
+Red Bull,$2.5,10.0,true,10
+Five Hour Energy,$2.5,2.0,true,10
+AMP,$1.5,10.0,true,10
+Coca Cola,$1.5,8.0,true,10
+Sprite,$1.5,8.0,true,10
+Fanta,$1.25,8.0,true,9
+Pepsi,$1.5,8.0,true,10
+Five,$0.75,1.0,true,10
+Orbit,$0.75,1.0,true,10
+Juicy Fruit,$0.75,1.0,true,10
+Lays,$1.0,2.21,true,10
+Doritos,$1.0,2.18,true,10
+Ruffles,$1.0,2.05,true,10
+Snickers,$1.0,2.35,true,7
+M&M's,$1.25,2.44,true,10
+Reeses,$1.25,2.44,true,10
