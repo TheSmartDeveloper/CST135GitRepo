@@ -22,7 +22,7 @@ public class InventoryManager
 	public void writeOut(String[] pArray, int[] dArray) throws FileNotFoundException
 	{
 		PrintWriter writer = new PrintWriter("inventory.csv");
-		writer.println("Name,Price,Weight,Flavor,Count");
+		writer.println("Type,Name,Price,Weight,Flavor,Count");
 		for(int i = 0; i < 25; i++)
 		{
 			writer.println(pArray[i] + "," + dArray[i]);

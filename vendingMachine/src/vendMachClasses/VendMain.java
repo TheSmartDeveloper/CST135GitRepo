@@ -1,6 +1,11 @@
 package vendMachClasses;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import javafx.scene.shape.Rectangle; 
 import java.time.Duration;
+import java.util.LinkedList;
+import java.util.Queue;
 
 import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
@@ -19,12 +24,19 @@ import javafx.scene.shape.Path;
 import javafx.stage.Stage;
 public class VendMain extends Application
 {
-
+	String finalInventory = " ";
 	public int dispenseCheck = 0;
 	public double priceCheck = 0.0;
 	public void start(Stage primaryStage) throws Exception
 	{
 		//ALL GRIDS & SCENES CREATION
+		//Global Inventory Manangement Methods
+		GlobalInventoryManagement newManager = new GlobalInventoryManagement();
+		newManager.pullFromFile();
+		newManager.sortArray();
+		newManager.searchArray("Dasani");
+		
+		
 		Restock LowOrPO = new Restock();
 		TranslateTransition test = new TranslateTransition();		//animation method created
 		StackPane root = new StackPane();	//created to show message above gridpane
@@ -47,6 +59,9 @@ public class VendMain extends Application
 		
 		GridPane servicePane = new GridPane();
 		Scene serviceScene = new Scene(servicePane);
+		
+		GridPane demoPane = new GridPane();
+		Scene demoScene = new Scene(demoPane);
 		
 		transaction updateTotal = new transaction();
 		
@@ -123,6 +138,10 @@ public class VendMain extends Application
 				{
 					sbCarmFrap.setText(SbCarmFrap.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					sbCarmFrap.setText(SbCarmFrap.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -149,6 +168,10 @@ public class VendMain extends Application
 				if(sbcf_D.getCount() <= 3)
 				{
 					sbCoffFrap.setText(SbCoffFrap.toPrint() + LowOrPO.declareLowInventory());
+				}
+				else
+				{
+					sbCoffFrap.setText(SbCoffFrap.toPrint());
 				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
@@ -177,6 +200,10 @@ public class VendMain extends Application
 				{
 					sbPSL.setText(SbPSL.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					sbPSL.setText(SbPSL.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -203,6 +230,10 @@ public class VendMain extends Application
 				if(sbcb_D.getCount() <= 3)
 				{
 					sbColBru.setText(SbColBru.toPrint() + LowOrPO.declareLowInventory());
+				}
+				else
+				{
+					sbColBru.setText(SbColBru.toPrint());
 				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
@@ -231,6 +262,10 @@ public class VendMain extends Application
 				{
 					Dasani.setText(dasani.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					Dasani.setText(dasani.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -257,6 +292,10 @@ public class VendMain extends Application
 				if(aquaf_D.getCount() <= 3)
 				{
 					Aquafina.setText(aquafina.toPrint() + LowOrPO.declareLowInventory());
+				}
+				else
+				{
+					Aquafina.setText(aquafina.toPrint());
 				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
@@ -285,6 +324,10 @@ public class VendMain extends Application
 				{
 					Kirkland.setText(kirkland.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					Kirkland.setText(kirkland.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -311,6 +354,10 @@ public class VendMain extends Application
 				if(memMark_D.getCount() <= 3)
 				{
 					MemMark.setText(memMark.toPrint() + LowOrPO.declareLowInventory());
+				}
+				else
+				{
+					MemMark.setText(memMark.toPrint());
 				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
@@ -339,6 +386,10 @@ public class VendMain extends Application
 				{
 					monster.setText(Monster.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					monster.setText(Monster.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -365,6 +416,10 @@ public class VendMain extends Application
 				if(redB_D.getCount() <= 3)
 				{
 					redBull.setText(RedBull.toPrint() + LowOrPO.declareLowInventory());
+				}
+				else
+				{
+					redBull.setText(RedBull.toPrint());
 				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
@@ -393,6 +448,10 @@ public class VendMain extends Application
 				{
 					fiveHourE.setText(FHE.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					fiveHourE.setText(FHE.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -419,6 +478,10 @@ public class VendMain extends Application
 				if(amp_D.getCount() <= 3)
 				{
 					amp.setText(AMP.toPrint() + LowOrPO.declareLowInventory());
+				}
+				else
+				{
+					amp.setText(AMP.toPrint());
 				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
@@ -447,6 +510,10 @@ public class VendMain extends Application
 				{
 					CocaCola.setText(cocaC.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					CocaCola.setText(cocaC.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -474,6 +541,10 @@ public class VendMain extends Application
 				{
 					Sprite.setText(sprite.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					Sprite.setText(sprite.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -500,6 +571,10 @@ public class VendMain extends Application
 				{
 					Fanta.setText(fanta.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					Fanta.setText(fanta.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -525,6 +600,10 @@ public class VendMain extends Application
 				if(pepsi_D.getCount() <= 3)
 				{
 					Pepsi.setText(pepsi.toPrint() + LowOrPO.declareLowInventory());
+				}
+				else
+				{
+					Pepsi.setText(pepsi.toPrint());
 				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
@@ -568,6 +647,10 @@ public class VendMain extends Application
 				{
 					Five.setText(five.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					Five.setText(five.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -593,6 +676,10 @@ public class VendMain extends Application
 				if(orbit_D.getCount() <= 3)
 				{
 					Orbit.setText(orbit.toPrint() + LowOrPO.declareLowInventory());
+				}
+				else
+				{
+					Orbit.setText(orbit.toPrint());
 				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
@@ -620,6 +707,10 @@ public class VendMain extends Application
 				{
 					JFruit.setText(juicyFruit.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					JFruit.setText(juicyFruit.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -645,6 +736,10 @@ public class VendMain extends Application
 				if(lays_D.getCount() <= 3)
 				{
 					Lays.setText(lays.toPrint() + LowOrPO.declareLowInventory());
+				}
+				else
+				{
+					Lays.setText(lays.toPrint());
 				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
@@ -672,6 +767,10 @@ public class VendMain extends Application
 				{
 					Doritos.setText(doritos.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					Doritos.setText(doritos.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -698,6 +797,10 @@ public class VendMain extends Application
 				{
 					Ruffles.setText(ruffles.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					Ruffles.setText(ruffles.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -723,6 +826,10 @@ public class VendMain extends Application
 				if(snickers_D.getCount() <= 3)
 				{
 					Snickers.setText(snickers.toPrint() + LowOrPO.declareLowInventory());
+				}
+				else
+				{
+					Snickers.setText(snickers.toPrint());
 				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
@@ -751,6 +858,10 @@ public class VendMain extends Application
 				{
 					mms.setText(MMS.toPrint() + LowOrPO.declareLowInventory());
 				}
+				else
+				{
+					mms.setText(MMS.toPrint());
+				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
 			PTotal.setText(String.valueOf(updateTotal.getPrice()));		//change total items
@@ -776,6 +887,10 @@ public class VendMain extends Application
 				if(reeses_D.getCount() <= 3)
 				{
 					Reeses.setText(reeses.toPrint() + LowOrPO.declareLowInventory());
+				}
+				else
+				{
+					Reeses.setText(reeses.toPrint());
 				}
 			}
 			ITotal.setText(String.valueOf(updateTotal.getItems()));		//change total price
@@ -1018,8 +1133,58 @@ public class VendMain extends Application
 					"There are " + snickers_D.getCount() + " " + snickers.toPrint() + "\n" + 
 					"There are " + mms_D.getCount() + " " + MMS.toPrint() + "\n" + 
 					"There are " + reeses_D.getCount() + " " + reeses.toPrint());
+			
+			finalInventory = Items.getText();
 		});
-				
+		
+		Button demoMode = new Button("Demo Mode");
+		servicePane.add(demoMode, 2, 4);
+		demoMode.setOnAction(e -> primaryStage.setScene(demoScene));
+		
+		//DEMO PANE
+		demoPane.setAlignment(Pos.CENTER);
+		demoPane.setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
+		demoPane.setHgap(5.5);
+		demoPane.setVgap(5.5);
+		
+		Button runDemo = new Button("Run Demo");
+		demoPane.add(runDemo, 3, 3);
+		DemoMode newDemo = new DemoMode();
+		Queue<fakePeople> demoA = new LinkedList<>();
+		Label qReadOut = new Label(" ");
+		Label qTotal = new Label(" ");
+		Label isTooLow = new Label(" ");
+		Label isFinished = new Label(" ");
+		demoPane.add(qReadOut, 4, 3);
+		demoPane.add(qTotal, 5, 3);
+		demoPane.add(isTooLow, 6, 3);
+		demoPane.add(isFinished, 7, 3);
+		runDemo.setOnAction(e -> 
+		{
+			try
+			{
+				newDemo.readQ(demoA);
+				String fakeish = " ";
+				double totalPrice = pepsi.price + SbColBru.price + dasani.price + five.price + MMS.price;
+				String Qtotal = (String.valueOf(totalPrice));
+				for(fakePeople deepFake : demoA)
+				{
+					fakeish = fakeish + deepFake.FName + ", " + deepFake.PName + ", " + deepFake.num + "\n";
+				}
+				qReadOut.setText(fakeish);
+				qTotal.setText("Total is: $" + Qtotal);
+				if(pepsi_D.getCount() <= 3 || sbcb_D.getCount() <= 3 || dasani_D.getCount() <= 3 || five_D.getCount() <= 3 || mms_D.getCount() <= 3)
+				{
+					isTooLow.setText("inventory is too low!!!");
+				}
+				isFinished.setText(finalInventory + " All customers have been served");
+			} catch (IOException e1)
+			{
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		});
+		
 		//RUN THE WHOLE THING
 		
 		primaryStage.setTitle("Vending Machine");

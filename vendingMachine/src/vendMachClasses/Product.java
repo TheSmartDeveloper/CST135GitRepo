@@ -70,6 +70,7 @@ abstract class Snack extends Product										//abstract class Snack where the f
 class Candy extends Snack													//Class candy for candy products only
 {
 	boolean sweet = true;													//boolean var to guarantee that the user is purchasing a candy
+	int amount = 0;
 	public Candy()															//default constructor
 	{
 		
@@ -88,6 +89,14 @@ class Candy extends Snack													//Class candy for candy products only
 	public boolean getFlavor()
 	{
 		return sweet;
+	}
+	public void setCount(int count)
+	{
+		int amount = count;
+	}
+	public int getCount()
+	{
+		return amount;
 	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
@@ -124,13 +133,14 @@ class Candy extends Snack													//Class candy for candy products only
 	}
 	public String arrayPrint()
 	{
-		return getName().toString() + ",$" + getPrice() + "," + getWeight() + "," + getFlavor();
+		return "Candy," + getName().toString() + ",$" + getPrice() + "," + getWeight() + "," + getFlavor();
 	}
 }
 
 class Chips extends Snack													//Class chips for chips products only
 {
 	boolean salty = true;													//boolean var to guarantee that the user is purchasing chips
+	int amount = 0;
 	public Chips()															//default constructor
 	{
 		
@@ -150,6 +160,14 @@ class Chips extends Snack													//Class chips for chips products only
 	{
 		return salty;
 	}
+	public void setCount(int count)
+	{
+		int amount = count;
+	}
+	public int getCount()
+	{
+		return amount;
+	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
 		return getName() + " is $" + getPrice();
@@ -184,13 +202,14 @@ class Chips extends Snack													//Class chips for chips products only
 	}
 	public String arrayPrint()
 	{
-		return getName().toString() + ",$" + getPrice() + "," + getWeight() + "," + getFlavor();
+		return "Chips," + getName().toString() + ",$" + getPrice() + "," + getWeight() + "," + getFlavor();
 	}
 }
 
 class Gum extends Snack													//Class gum for gum products only
 {
 	boolean chewy = true;													//boolean var to guarantee that the user is purchasing gum
+	int amount = 0;
 	public Gum()															//default constructor
 	{
 		
@@ -210,6 +229,14 @@ class Gum extends Snack													//Class gum for gum products only
 	{
 		return chewy;
 	}
+	public void setCount(int count)
+	{
+		int amount = count;
+	}
+	public int getCount()
+	{
+		return amount;
+	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
 		return getName() + " is $" + getPrice();
@@ -244,7 +271,7 @@ class Gum extends Snack													//Class gum for gum products only
 	}
 	public String arrayPrint()
 	{
-		return getName().toString() + ",$" + getPrice() + "," + getWeight() + "," + getFlavor();
+		return "Gum," + getName().toString() + ",$" + getPrice() + "," + getWeight() + "," + getFlavor();
 	}
 }
 //----------DRINK BITS----------//
@@ -276,6 +303,7 @@ abstract class Drink extends Product										//abstract class Drink where the d
 class energyDrinks extends Drink												//Class enerrgyDrinks for energy drinks only
 {
 	boolean crappyTaste = true;													//boolean var to guarantee that the user is purchasing an energy drink
+	int amount = 0;
 	public energyDrinks()														//default constructor
 	{
 		
@@ -295,6 +323,14 @@ class energyDrinks extends Drink												//Class enerrgyDrinks for energy dri
 	{
 		return crappyTaste;
 	}
+	public void setCount(int count)
+	{
+		int amount = count;
+	}
+	public int getCount()
+	{
+		return amount;
+	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
 		return getName() + " is $" + getPrice();
@@ -329,13 +365,14 @@ class energyDrinks extends Drink												//Class enerrgyDrinks for energy dri
 	}
 	public String arrayPrint()
 	{
-		return getName().toString() + ",$" + getPrice() + "," + getDrinkWeight() + "," + getFlavor();
+		return "Energy Drink," + getName().toString() + ",$" + getPrice() + "," + getDrinkWeight() + "," + getFlavor();
 	}
 }
 
 class water extends Drink												//Class water for water only
 {
 	boolean flat = true;													//boolean var to guarantee that the user is purchasing a water
+	int amount = 0;
 	public water()														//default constructor
 	{
 		
@@ -355,6 +392,14 @@ class water extends Drink												//Class water for water only
 	{
 		return flat;
 	}
+	public void setCount(int count)
+	{
+		int amount = count;
+	}
+	public int getCount()
+	{
+		return amount;
+	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
 		return getName() + " is $" + getPrice();
@@ -389,13 +434,14 @@ class water extends Drink												//Class water for water only
 	}
 	public String arrayPrint()
 	{
-		return getName().toString() + ",$" + getPrice() + "," + getDrinkWeight() + "," + getFlavor();
+		return "Water," + getName().toString() + ",$" + getPrice() + "," + getDrinkWeight() + "," + getFlavor();
 	}
 }
 
 class soda extends Drink												//Class soda for soda only
 {
 	boolean cloying = true;													//boolean var to guarantee that the user is purchasing a soda
+	int amount = 0;
 	public soda()														//default constructor
 	{
 		
@@ -415,6 +461,14 @@ class soda extends Drink												//Class soda for soda only
 	{
 		return cloying;
 	}
+	public void setCount(int count)
+	{
+		int amount = count;
+	}
+	public int getCount()
+	{
+		return amount;
+	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
 		return getName() + " is $" + getPrice();
@@ -449,13 +503,14 @@ class soda extends Drink												//Class soda for soda only
 	}
 	public String arrayPrint()
 	{
-		return getName().toString() + ",$" + getPrice() + "," + getDrinkWeight() + "," + getFlavor();
+		return "Soda," + getName().toString() + ",$" + getPrice() + "," + getDrinkWeight() + "," + getFlavor();
 	}
 }
 
 class coffee extends Drink												//Class coffee for coffee only
 {
 	boolean hyper = true;													//boolean var to guarantee that the user is purchasing a coffee
+	int amount = 0;
 	public coffee()														//default constructor
 	{
 		
@@ -475,6 +530,14 @@ class coffee extends Drink												//Class coffee for coffee only
 	{
 		return hyper;
 	}
+	public void setCount(int count)
+	{
+		int amount = count;
+	}
+	public int getCount()
+	{
+		return amount;
+	}
 	public String toPrint()													//toString method created to print anything necessary
 	{
 		return getName() + " is $" + getPrice();
@@ -509,6 +572,6 @@ class coffee extends Drink												//Class coffee for coffee only
 	}
 	public String arrayPrint()
 	{
-		return getName().toString() + ",$" + getPrice() + "," + getDrinkWeight() + "," + getFlavor();
+		return "Coffee," + getName().toString() + ",$" + getPrice() + "," + getDrinkWeight() + "," + getFlavor();
 	}
 }
